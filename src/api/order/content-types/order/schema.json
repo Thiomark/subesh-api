@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "streetAddress": {
+      "type": "richtext",
+      "required": true
+    },
+    "suburb": {
+      "type": "string",
+      "required": false
+    },
+    "province": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "message": {
+      "type": "richtext"
+    },
+    "paymentMethod": {
+      "type": "string",
+      "required": true
+    },
+    "OrderedItems": {
+      "type": "json",
+      "required": true
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "user_id": {
+      "required": true,
+      "type": "integer"
+    },
+    "postcode": {
+      "type": "string",
+      "required": true
+    },
+    "shippedAt": {
+      "type": "datetime"
+    },
+    "totalAmount": {
+      "type": "decimal",
+      "required": true
+    },
+    "shippingAmount": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}

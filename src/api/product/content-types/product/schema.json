@@ -37,6 +37,16 @@
     },
     "category": {
       "type": "string"
+    },
+    "quantity": {
+      "type": "integer",
+      "default": 99,
+      "required": true
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true,
+      "required": true
     }
   }
 }
